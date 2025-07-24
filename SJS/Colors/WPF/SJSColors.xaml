@@ -1,0 +1,48 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--#region Base Colors-->
+    <SolidColorBrush x:Key="COLOR_TRNASPARENT" Color="Transparent"/>
+    <SolidColorBrush x:Key="COLOR_YELLOW" Color="#FFFF00"/>
+    <SolidColorBrush x:Key="COLOR_WHITE" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="COLOR_ORANGE" Color="#FFA500"/>
+    <SolidColorBrush x:Key="COLOR_GRAY" Color="#808080"/>
+    <SolidColorBrush x:Key="COLOR_RED" Color="#FF0000"/>
+    <SolidColorBrush x:Key="COLOR_BLACK" Color="#000000"/>
+    <SolidColorBrush x:Key="COLOR_GREEN" Color="#008000"/>
+    <SolidColorBrush x:Key="COLOR_EMERALD" Color="#C6DBDA"/>
+    <SolidColorBrush x:Key="COLOR_PURPLE" Color="#800080"/>
+    <SolidColorBrush x:Key="COLOR_TEAL" Color="#008080"/>
+    <SolidColorBrush x:Key="COLOR_NAVY" Color="#000080"/>
+    <SolidColorBrush x:Key="COLOR_MAGENTA" Color="#FF00FF"/>
+    <SolidColorBrush x:Key="COLOR_LIME" Color="#00FF00"/>
+    <SolidColorBrush x:Key="COLOR_BLUE" Color="#0000FF"/>
+    <SolidColorBrush x:Key="COLOR_OLIVE" Color="#808000"/>
+    <SolidColorBrush x:Key="COLOR_MAROON" Color="#800000"/>
+    <SolidColorBrush x:Key="COLOR_CORAL" Color="#FF7F50"/>
+    <SolidColorBrush x:Key="COLOR_TAN" Color="#D2B48C"/>
+    <SolidColorBrush x:Key="COLOR_KHAKI" Color="#F0E68C"/>
+    <SolidColorBrush x:Key="COLOR_GOLD" Color="#FFD700"/>
+    <SolidColorBrush x:Key="COLOR_BEIGE" Color="#F5F5DC"/>
+    <SolidColorBrush x:Key="COLOR_HOTPINK" Color="#FF69B4"/>
+    <!--#endregion-->
+    <!--#region Dark Colors-->
+    <SolidColorBrush x:Key="COLOR_DARK_ORANGE" Color="#FFF58513"/>
+    <SolidColorBrush x:Key="COLOR_DARK_BLUE1" Color="#0B314A"/>
+    <SolidColorBrush x:Key="COLOR_DARK_BLUE2" Color="#07263B"/>
+    <SolidColorBrush x:Key="COLOR_DARK_GREEN" Color="#FF0F2C00"/>
+    <SolidColorBrush x:Key="COLOR_DARK_RED" Color="#FF7E0303"/>
+    <SolidColorBrush x:Key="COLOR_DARK_PITCH" Color="#FF968A"/>
+    <SolidColorBrush x:Key="COLOR_DARK_CYAN" Color="#008B8B"/>
+    <SolidColorBrush x:Key="COLOR_DARK_VIOLET" Color="#9400D3"/>
+    <!--#endregion-->
+    <!--#region Light Colors-->
+    <SolidColorBrush x:Key="COLOR_LIGHT_ORANGE" Color="#FFFBBE80"/>
+    <SolidColorBrush x:Key="COLOR_LIGHT_BLUE" Color="#FF374CD8"/>
+    <SolidColorBrush x:Key="COLOR_LIGHT_RED" Color="#FFCF1919"/>
+    <SolidColorBrush x:Key="COLOR_LIGHT_GREEN" Color="#32CD32"/>
+    <SolidColorBrush x:Key="COLOR_LIGHT_SEAGREEN" Color="#20B2AA"/>
+    <SolidColorBrush x:Key="COLOR_LIGHT_CYAN" Color="#E0FFFF"/>
+    <SolidColorBrush x:Key="COLOR_LIGHT_SKYBLUE" Color="#87CEFA"/>
+    <SolidColorBrush x:Key="COLOR_LIGHT_SLATEGRAY" Color="#778899"/>
+    <!--#endregion-->
+</ResourceDictionary>

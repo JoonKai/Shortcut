@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shortcut", "Shortcut\Shortcut.csproj", "{67AE2279-B6E5-41EF-A825-493F12E4EB59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SJS", "SJS\SJS.csproj", "{8C4D7B56-BEE1-414A-869A-68D7719F2856}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SJSControls", "SJSControls\SJSControls.csproj", "{76D80D31-A857-4FF2-B2D3-154C41D3720E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67AE2279-B6E5-41EF-A825-493F12E4EB59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67AE2279-B6E5-41EF-A825-493F12E4EB59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67AE2279-B6E5-41EF-A825-493F12E4EB59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67AE2279-B6E5-41EF-A825-493F12E4EB59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C4D7B56-BEE1-414A-869A-68D7719F2856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C4D7B56-BEE1-414A-869A-68D7719F2856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C4D7B56-BEE1-414A-869A-68D7719F2856}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C4D7B56-BEE1-414A-869A-68D7719F2856}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76D80D31-A857-4FF2-B2D3-154C41D3720E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76D80D31-A857-4FF2-B2D3-154C41D3720E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76D80D31-A857-4FF2-B2D3-154C41D3720E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76D80D31-A857-4FF2-B2D3-154C41D3720E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CFB56DD8-631B-4FAE-B2AF-F6CE9850760D}
+	EndGlobalSection
+EndGlobal

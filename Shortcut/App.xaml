@@ -1,0 +1,16 @@
+﻿<Application x:Class="Shortcut.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Shortcut">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/SJS;component/Colors/WPF/SJSColors.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/SJSControls;component/Styles/Generic.xaml"/>
+                <ResourceDictionary>
+                    <local:BootStrapper x:Key="BootStrapper"/>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

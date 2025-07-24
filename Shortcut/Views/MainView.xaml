@@ -1,0 +1,22 @@
+﻿<Window x:Class="Shortcut.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:SJSControls.Controls.Basic;assembly=SJSControls"
+        xmlns:shortcut="clr-namespace:Shortcut.Views.ControlViews"
+        xmlns:local="clr-namespace:Shortcut.Views"
+        mc:Ignorable="d"
+        Title="MainView" Height="1200" Width="500" WindowStyle="None" Background="{StaticResource COLOR_TEAL}">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="20" ResizeBorderThickness="2"/>
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <shortcut:ShorcutView Grid.Row="2"/>
+    </Grid>
+</Window>
