@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Shortcut.Views.ControlViews"
-             xmlns:control="clr-namespace:SJSControls.Controls.Basic;assembly=SJSControls"
-             mc:Ignorable="d">
+             xmlns:control="clr-namespace:SJSControls.Controls.Composite;assembly=SJSControls"
+             mc:Ignorable="d" >
     <UserControl.Resources>
         <Style TargetType="{x:Type TextBlock}">
             <Setter Property="Foreground" Value="Black"/>
@@ -13,12 +13,13 @@
     </UserControl.Resources>
     <Grid x:Name="MainGrid" >
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="300"/>
             <RowDefinition Height="3"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <TabControl Grid.Row="0" Background="Transparent">
-            <TabItem Header="VNC1" Foreground="{StaticResource COLOR_RED}">
+        <!--#region 상단 탭컨트롤-->
+        <TabControl Grid.Row="0" Background="Transparent" Style="{StaticResource MyTabControl}">
+            <TabItem Header="Programs" Foreground="{StaticResource COLOR_RED}">
                 <ScrollViewer VerticalScrollBarVisibility="Hidden">
                     <Grid Margin="0 5 5 5">
                         <Grid.RowDefinitions>
@@ -53,40 +54,40 @@
                             <RowDefinition Height="25"/>
                             <RowDefinition Height="25"/>
                         </Grid.RowDefinitions>
-                        <control:SJSShortcutControl TBWidth="100" Grid.Row="0" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="1" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="2" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="3" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="4" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="5" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="6" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="7" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="8" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="9" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="10" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="11" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="12" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="13" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="14" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="15" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="16" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="17" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="18" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="19" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="20" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="21" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="22" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="23" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="24" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="25" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="26" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="27" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="28" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="29" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="0" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="1" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="2" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="3" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="4" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="5" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="6" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="7" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="8" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="9" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="10" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="11" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="12" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="13" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="14" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="15" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="16" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="17" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="18" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="19" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="20" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="21" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="22" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="23" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="24" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="25" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="26" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="27" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="28" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="29" Height="23"/>
                     </Grid>
                 </ScrollViewer>
             </TabItem>
-            <TabItem Header="VNC2" Foreground="{StaticResource COLOR_GREEN}">
+            <TabItem Header="WebSite" Foreground="{StaticResource COLOR_GREEN}">
                 <ScrollViewer VerticalScrollBarVisibility="Hidden">
                     <Grid Margin=" 0 5 5 5">
                         <Grid.RowDefinitions>
@@ -121,40 +122,40 @@
                             <RowDefinition Height="25"/>
                             <RowDefinition Height="25"/>
                         </Grid.RowDefinitions>
-                        <control:SJSShortcutControl Grid.Row="0" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="1" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="2" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="3" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="4" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="5" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="6" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="7" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="8" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="9" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="10" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="11" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="12" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="13" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="14" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="15" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="16" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="17" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="18" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="19" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="20" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="21" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="22" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="23" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="24" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="25" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="26" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="27" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="28" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="29" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="0" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="1" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="2" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="3" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="4" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="5" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="6" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="7" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="8" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="9" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="10" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="11" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="12" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="13" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="14" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="15" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="16" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="17" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="18" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="19" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="20" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="21" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="22" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="23" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="24" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="25" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="26" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="27" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="28" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="29" Height="23"/>
                     </Grid>
                 </ScrollViewer>
             </TabItem>
-            <TabItem Header="VNC3" Foreground="{StaticResource COLOR_DARK_CYAN}">
+            <TabItem Header="폴더" Foreground="{StaticResource COLOR_DARK_CYAN}">
                 <ScrollViewer VerticalScrollBarVisibility="Hidden">
                     <Grid Margin="0 5 5 5">
                         <Grid.RowDefinitions>
@@ -189,42 +190,47 @@
                             <RowDefinition Height="25"/>
                             <RowDefinition Height="25"/>
                         </Grid.RowDefinitions>
-                        <control:SJSShortcutControl Grid.Row="0" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="1" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="2" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="3" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="4" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="5" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="6" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="7" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="8" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="9" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="10" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="11" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="12" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="13" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="14" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="15" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="16" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="17" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="18" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="19" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="20" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="21" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="22" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="23" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="24" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="25" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="26" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="27" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="28" Height="23"/>
-                        <control:SJSShortcutControl Grid.Row="29" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="0" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="1" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="2" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="3" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="4" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="5" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="6" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="7" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="8" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="9" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="10" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="11" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="12" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="13" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="14" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="15" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="16" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="17" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="18" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="19" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="20" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="21" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="22" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="23" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="24" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="25" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="26" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="27" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="28" Height="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="29" Height="23"/>
                     </Grid>
                 </ScrollViewer>
             </TabItem>
         </TabControl>
+        <!--#endregion-->
+        
+        <!--#region 스플리터-->
         <GridSplitter x:Name="Splitter" Background="{StaticResource COLOR_DARK_ORANGE}" Grid.Row="1" HorizontalAlignment="Stretch"/>
-
+        <!--#endregion-->
+        
+        <!--#region 하단 탭컨트롤-->
         <TabControl Grid.Row="2" Background="Transparent">
             <TabItem Header="PRO1" Foreground="{StaticResource COLOR_RED}">
                 <ScrollViewer VerticalScrollBarVisibility="Hidden">
@@ -261,36 +267,36 @@
                             <RowDefinition Height="25"/>
                             <RowDefinition Height="25"/>
                         </Grid.RowDefinitions>
-                        <control:SJSShortcutControl Grid.Row="0"/>
-                        <control:SJSShortcutControl Grid.Row="1"/>
-                        <control:SJSShortcutControl Grid.Row="2"/>
-                        <control:SJSShortcutControl Grid.Row="3"/>
-                        <control:SJSShortcutControl Grid.Row="4"/>
-                        <control:SJSShortcutControl Grid.Row="5"/>
-                        <control:SJSShortcutControl Grid.Row="6"/>
-                        <control:SJSShortcutControl Grid.Row="7"/>
-                        <control:SJSShortcutControl Grid.Row="8"/>
-                        <control:SJSShortcutControl Grid.Row="9"/>
-                        <control:SJSShortcutControl Grid.Row="10"/>
-                        <control:SJSShortcutControl Grid.Row="11"/>
-                        <control:SJSShortcutControl Grid.Row="12"/>
-                        <control:SJSShortcutControl Grid.Row="13"/>
-                        <control:SJSShortcutControl Grid.Row="14"/>
-                        <control:SJSShortcutControl Grid.Row="15"/>
-                        <control:SJSShortcutControl Grid.Row="16"/>
-                        <control:SJSShortcutControl Grid.Row="17"/>
-                        <control:SJSShortcutControl Grid.Row="18"/>
-                        <control:SJSShortcutControl Grid.Row="19"/>
-                        <control:SJSShortcutControl Grid.Row="20"/>
-                        <control:SJSShortcutControl Grid.Row="21"/>
-                        <control:SJSShortcutControl Grid.Row="22"/>
-                        <control:SJSShortcutControl Grid.Row="23"/>
-                        <control:SJSShortcutControl Grid.Row="24"/>
-                        <control:SJSShortcutControl Grid.Row="25"/>
-                        <control:SJSShortcutControl Grid.Row="26"/>
-                        <control:SJSShortcutControl Grid.Row="27"/>
-                        <control:SJSShortcutControl Grid.Row="28"/>
-                        <control:SJSShortcutControl Grid.Row="29"/>
+                        <control:SJS_ShortcutControl Grid.Row="0"/>
+                        <control:SJS_ShortcutControl Grid.Row="1"/>
+                        <control:SJS_ShortcutControl Grid.Row="2"/>
+                        <control:SJS_ShortcutControl Grid.Row="3"/>
+                        <control:SJS_ShortcutControl Grid.Row="4"/>
+                        <control:SJS_ShortcutControl Grid.Row="5"/>
+                        <control:SJS_ShortcutControl Grid.Row="6"/>
+                        <control:SJS_ShortcutControl Grid.Row="7"/>
+                        <control:SJS_ShortcutControl Grid.Row="8"/>
+                        <control:SJS_ShortcutControl Grid.Row="9"/>
+                        <control:SJS_ShortcutControl Grid.Row="10"/>
+                        <control:SJS_ShortcutControl Grid.Row="11"/>
+                        <control:SJS_ShortcutControl Grid.Row="12"/>
+                        <control:SJS_ShortcutControl Grid.Row="13"/>
+                        <control:SJS_ShortcutControl Grid.Row="14"/>
+                        <control:SJS_ShortcutControl Grid.Row="15"/>
+                        <control:SJS_ShortcutControl Grid.Row="16"/>
+                        <control:SJS_ShortcutControl Grid.Row="17"/>
+                        <control:SJS_ShortcutControl Grid.Row="18"/>
+                        <control:SJS_ShortcutControl Grid.Row="19"/>
+                        <control:SJS_ShortcutControl Grid.Row="20"/>
+                        <control:SJS_ShortcutControl Grid.Row="21"/>
+                        <control:SJS_ShortcutControl Grid.Row="22"/>
+                        <control:SJS_ShortcutControl Grid.Row="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="24"/>
+                        <control:SJS_ShortcutControl Grid.Row="25"/>
+                        <control:SJS_ShortcutControl Grid.Row="26"/>
+                        <control:SJS_ShortcutControl Grid.Row="27"/>
+                        <control:SJS_ShortcutControl Grid.Row="28"/>
+                        <control:SJS_ShortcutControl Grid.Row="29"/>
                     </Grid>
                 </ScrollViewer>
             </TabItem>
@@ -329,36 +335,36 @@
                             <RowDefinition Height="25"/>
                             <RowDefinition Height="25"/>
                         </Grid.RowDefinitions>
-                        <control:SJSShortcutControl Grid.Row="0"/>
-                        <control:SJSShortcutControl Grid.Row="1"/>
-                        <control:SJSShortcutControl Grid.Row="2"/>
-                        <control:SJSShortcutControl Grid.Row="3"/>
-                        <control:SJSShortcutControl Grid.Row="4"/>
-                        <control:SJSShortcutControl Grid.Row="5"/>
-                        <control:SJSShortcutControl Grid.Row="6"/>
-                        <control:SJSShortcutControl Grid.Row="7"/>
-                        <control:SJSShortcutControl Grid.Row="8"/>
-                        <control:SJSShortcutControl Grid.Row="9"/>
-                        <control:SJSShortcutControl Grid.Row="10"/>
-                        <control:SJSShortcutControl Grid.Row="11"/>
-                        <control:SJSShortcutControl Grid.Row="12"/>
-                        <control:SJSShortcutControl Grid.Row="13"/>
-                        <control:SJSShortcutControl Grid.Row="14"/>
-                        <control:SJSShortcutControl Grid.Row="15"/>
-                        <control:SJSShortcutControl Grid.Row="16"/>
-                        <control:SJSShortcutControl Grid.Row="17"/>
-                        <control:SJSShortcutControl Grid.Row="18"/>
-                        <control:SJSShortcutControl Grid.Row="19"/>
-                        <control:SJSShortcutControl Grid.Row="20"/>
-                        <control:SJSShortcutControl Grid.Row="21"/>
-                        <control:SJSShortcutControl Grid.Row="22"/>
-                        <control:SJSShortcutControl Grid.Row="23"/>
-                        <control:SJSShortcutControl Grid.Row="24"/>
-                        <control:SJSShortcutControl Grid.Row="25"/>
-                        <control:SJSShortcutControl Grid.Row="26"/>
-                        <control:SJSShortcutControl Grid.Row="27"/>
-                        <control:SJSShortcutControl Grid.Row="28"/>
-                        <control:SJSShortcutControl Grid.Row="29"/>
+                        <control:SJS_ShortcutControl Grid.Row="0"/>
+                        <control:SJS_ShortcutControl Grid.Row="1"/>
+                        <control:SJS_ShortcutControl Grid.Row="2"/>
+                        <control:SJS_ShortcutControl Grid.Row="3"/>
+                        <control:SJS_ShortcutControl Grid.Row="4"/>
+                        <control:SJS_ShortcutControl Grid.Row="5"/>
+                        <control:SJS_ShortcutControl Grid.Row="6"/>
+                        <control:SJS_ShortcutControl Grid.Row="7"/>
+                        <control:SJS_ShortcutControl Grid.Row="8"/>
+                        <control:SJS_ShortcutControl Grid.Row="9"/>
+                        <control:SJS_ShortcutControl Grid.Row="10"/>
+                        <control:SJS_ShortcutControl Grid.Row="11"/>
+                        <control:SJS_ShortcutControl Grid.Row="12"/>
+                        <control:SJS_ShortcutControl Grid.Row="13"/>
+                        <control:SJS_ShortcutControl Grid.Row="14"/>
+                        <control:SJS_ShortcutControl Grid.Row="15"/>
+                        <control:SJS_ShortcutControl Grid.Row="16"/>
+                        <control:SJS_ShortcutControl Grid.Row="17"/>
+                        <control:SJS_ShortcutControl Grid.Row="18"/>
+                        <control:SJS_ShortcutControl Grid.Row="19"/>
+                        <control:SJS_ShortcutControl Grid.Row="20"/>
+                        <control:SJS_ShortcutControl Grid.Row="21"/>
+                        <control:SJS_ShortcutControl Grid.Row="22"/>
+                        <control:SJS_ShortcutControl Grid.Row="23"/>
+                        <control:SJS_ShortcutControl Grid.Row="24"/>
+                        <control:SJS_ShortcutControl Grid.Row="25"/>
+                        <control:SJS_ShortcutControl Grid.Row="26"/>
+                        <control:SJS_ShortcutControl Grid.Row="27"/>
+                        <control:SJS_ShortcutControl Grid.Row="28"/>
+                        <control:SJS_ShortcutControl Grid.Row="29"/>
                     </Grid>
                 </ScrollViewer>
             </TabItem>
@@ -397,26 +403,26 @@
                             <RowDefinition Height="25"/>
                             <RowDefinition Height="25"/>
                         </Grid.RowDefinitions>
-                        <control:SJSShortcutControl Grid.Row="0" />
-                        <control:SJSShortcutControl Grid.Row="1" />
-                        <control:SJSShortcutControl Grid.Row="2" />
-                        <control:SJSShortcutControl Grid.Row="3" />
-                        <control:SJSShortcutControl Grid.Row="4" />
-                        <control:SJSShortcutControl Grid.Row="5" />
-                        <control:SJSShortcutControl Grid.Row="6" />
-                        <control:SJSShortcutControl Grid.Row="7" />
-                        <control:SJSShortcutControl Grid.Row="8" />
-                        <control:SJSShortcutControl Grid.Row="9" />
-                        <control:SJSShortcutControl Grid.Row="10" />
-                        <control:SJSShortcutControl Grid.Row="11" />
-                        <control:SJSShortcutControl Grid.Row="12" />
-                        <control:SJSShortcutControl Grid.Row="13" />
-                        <control:SJSShortcutControl Grid.Row="14" />
-                        <control:SJSShortcutControl Grid.Row="15" />
-                        <control:SJSShortcutControl Grid.Row="16" />
-                        <control:SJSShortcutControl Grid.Row="17" />
-                        <control:SJSShortcutControl Grid.Row="18" />
-                        <control:SJSShortcutControl Grid.Row="19" />
+                        <control:SJS_ShortcutControl Grid.Row="0" />
+                        <control:SJS_ShortcutControl Grid.Row="1" />
+                        <control:SJS_ShortcutControl Grid.Row="2" />
+                        <control:SJS_ShortcutControl Grid.Row="3" />
+                        <control:SJS_ShortcutControl Grid.Row="4" />
+                        <control:SJS_ShortcutControl Grid.Row="5" />
+                        <control:SJS_ShortcutControl Grid.Row="6" />
+                        <control:SJS_ShortcutControl Grid.Row="7" />
+                        <control:SJS_ShortcutControl Grid.Row="8" />
+                        <control:SJS_ShortcutControl Grid.Row="9" />
+                        <control:SJS_ShortcutControl Grid.Row="10" />
+                        <control:SJS_ShortcutControl Grid.Row="11" />
+                        <control:SJS_ShortcutControl Grid.Row="12" />
+                        <control:SJS_ShortcutControl Grid.Row="13" />
+                        <control:SJS_ShortcutControl Grid.Row="14" />
+                        <control:SJS_ShortcutControl Grid.Row="15" />
+                        <control:SJS_ShortcutControl Grid.Row="16" />
+                        <control:SJS_ShortcutControl Grid.Row="17" />
+                        <control:SJS_ShortcutControl Grid.Row="18" />
+                        <control:SJS_ShortcutControl Grid.Row="19" />
                     </Grid>
                 </ScrollViewer>
             </TabItem>
@@ -433,17 +439,18 @@
                             <RowDefinition Height="25"/>
                             <RowDefinition Height="25"/>
                         </Grid.RowDefinitions>
-                        <control:SJSShortcutControl Grid.Row="0" />
-                        <control:SJSShortcutControl Grid.Row="1" />
-                        <control:SJSShortcutControl Grid.Row="2" />
-                        <control:SJSShortcutControl Grid.Row="3" />
-                        <control:SJSShortcutControl Grid.Row="4" />
-                        <control:SJSShortcutControl Grid.Row="5" />
-                        <control:SJSShortcutControl Grid.Row="6" />
-                        <control:SJSShortcutControl Grid.Row="7" />
+                        <control:SJS_ShortcutControl Grid.Row="0" />
+                        <control:SJS_ShortcutControl Grid.Row="1" />
+                        <control:SJS_ShortcutControl Grid.Row="2" />
+                        <control:SJS_ShortcutControl Grid.Row="3" />
+                        <control:SJS_ShortcutControl Grid.Row="4" />
+                        <control:SJS_ShortcutControl Grid.Row="5" />
+                        <control:SJS_ShortcutControl Grid.Row="6" />
+                        <control:SJS_ShortcutControl Grid.Row="7" />
                     </Grid>
                 </ScrollViewer>
             </TabItem>
         </TabControl>
+        <!--#endregion-->
     </Grid>
 </UserControl>

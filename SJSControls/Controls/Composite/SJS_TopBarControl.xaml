@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="SJSControls.Controls.Composite.SJS_TopBarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SJSControls.Controls.Composite"
+             xmlns:converters="clr-namespace:SJSControls.UIConverters"
+             mc:Ignorable="d" >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/SJS;component/Colors/WPF/SJSColors.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <converters:WindowStateMarginConverter x:Key="WindowStateMarginConverter"/>
+            <converters:BooleanToVisibilityConverter x:Key="BoolToVis"/>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Width" Value="20"/>
+                <Setter Property="Height" Value="20"/>
+                <Setter Property="DockPanel.Dock" Value="Right"/>
+                <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="Part_Border" Margin="1" BorderBrush="White" BorderThickness="0.2" Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" TextElement.Foreground="{TemplateBinding Foreground}" ContentSource="Content"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="Part_Border" Property="Background" Value="#FF00FF"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="Admin" TargetType="{x:Type Button}">
+                <Setter Property="DockPanel.Dock" Value="Right"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="BorderBrush" Value="Transparent"/>
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+            </Style>
+            <Style TargetType="{x:Type TextBlock}">
+                <Setter Property="Text" Value="{Binding Title, ElementName=root}"/>
+                <Setter Property="Foreground" Value="{Binding TitleColor, ElementName=root}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+            <Style x:Key="BTNTextBlock" TargetType="{x:Type TextBlock}">
+                <Setter Property="Foreground" Value="{StaticResource COLOR_WHITE}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <DockPanel x:Name="docpnlTitle" Background="{StaticResource COLOR_DARK_DEEPGRAY}" LastChildFill="False">
+        <Image Margin="5 0 0 0" Width="15" Height="15"/>
+        <TextBlock FontWeight="Bold" FontSize="13" Margin="5 0 0 0 "/>
+        <Button x:Name="ExitButton" Width="50">
+            <Button.Content>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../../Assets/Images/close.png" Width="20" HorizontalAlignment="Left"/>
+                    <TextBlock Style="{StaticResource BTNTextBlock}" HorizontalAlignment="Right" Text="종료"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+        <Button x:Name="MaximizeButton" Width="60" Visibility="{Binding IsVisibility,ElementName=root ,Converter={StaticResource BoolToVis}}" >
+            <Button.Content>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../../Assets/Images/close.png" Width="20" HorizontalAlignment="Left"/>
+                    <TextBlock Style="{StaticResource BTNTextBlock}" HorizontalAlignment="Right" Text="최대화"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+        <Button x:Name="MinimizeButton" Width="60">
+            <Button.Content>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../../Assets/Images/close.png" Width="20" HorizontalAlignment="Left"/>
+                    <TextBlock Style="{StaticResource BTNTextBlock}" HorizontalAlignment="Right" Text="최소화"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+    </DockPanel>
+</UserControl>

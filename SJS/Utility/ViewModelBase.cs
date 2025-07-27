@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Shortcut
+namespace SJS.Utility
 {
     public class ViewModelBase : INotifyPropertyChanged
     {

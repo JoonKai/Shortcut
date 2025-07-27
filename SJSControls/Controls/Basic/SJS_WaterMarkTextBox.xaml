@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="SJSControls.Controls.Basic.SJS_WaterMarkTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SJSControls.Controls.Basic"
+             xmlns:uiConverters="clr-namespace:SJSControls.UIConverters"
+             mc:Ignorable="d" x:Name="root">
+    <UserControl.Resources>
+        <uiConverters:ValidatingBorderBrushConverter x:Key="ValidatingBorderBrushConverter"/>
+        <uiConverters:ValidatingBorderThicknessConverter x:Key="ValidatingBorderThicknessConverter"/>
+        <Style x:Key="BaseControl" TargetType="{x:Type FrameworkElement}">
+            <Setter Property="Control.FontSize" Value="{Binding FontSize, ElementName=root}"/>
+            <Setter Property="Control.FontFamily" Value="{Binding FontFamily, ElementName=root}"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseControl}">
+            <Setter Property="Text" Value="{Binding WaterMarkText, ElementName=root}"/>
+            <Setter Property="Foreground" Value="{Binding WaterMarkTextColor, ElementName=root}"/>
+            <Setter Property="Padding" Value="5 0 0 0"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Visibility" Value="Collapsed"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Text, ElementName=txt}" Value="">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseControl}">
+            <Setter Property="Text" Value="{Binding Text, ElementName=root, UpdateSourceTrigger=PropertyChanged}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, ElementName=root}"/>
+            <Setter Property="Foreground" Value="{Binding TBTextColor, ElementName=root}"/>
+            <Setter Property="IsReadOnly" Value="{Binding TBReadOnly, ElementName=root}"/>
+            <Setter Property="TextWrapping" Value="{Binding TextWrapping, ElementName=root}"/>
+            <Setter Property="AcceptsReturn" Value="{Binding AcceptsReturn, ElementName=root}"/>
+            <Setter Property="Width" Value="{Binding Width, ElementName=root}"/>
+            <Setter Property="Height" Value="{Binding Height,ElementName=root}"/>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <MultiBinding Converter="{StaticResource ValidatingBorderBrushConverter}">
+                        <Binding Path="Validating" ElementName="root"/>
+                        <Binding Path="BorderBrush" ElementName="root"/>
+                    </MultiBinding>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderThickness">
+                <Setter.Value>
+                    <MultiBinding Converter="{StaticResource ValidatingBorderThicknessConverter}">
+                        <Binding Path="Validating" ElementName="root"/>
+                        <Binding Path="BorderThickness" ElementName="root"/>
+                    </MultiBinding>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <TextBlock/>
+        <TextBox x:Name="TBX_Watermark" TextChanged="TBX_Watermark_TextChanged"/>
+    </Grid>
+</UserControl>

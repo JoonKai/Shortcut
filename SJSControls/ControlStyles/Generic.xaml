@@ -8,7 +8,7 @@
         <ResourceDictionary Source="/SJSControls;component/Themes/Units/DayOfWeek.xaml"/>
         <ResourceDictionary Source="/SJSControls;component/Themes/Units/CalendarBoxItem.xaml"/>
         <ResourceDictionary Source="/SJSControls;component/Themes/Units/CalendarBox.xaml"/>
-        <ResourceDictionary Source="/SJSControls;component/Themes/Units/ChevronButton.xaml"/>
-        <ResourceDictionary Source="/SJSControls;component/Themes/Units/CalendarSwitch.xaml"/>-->
+        <ResourceDictionary Source="/SJSControls;component/Themes/Units/ChevronButton.xaml"/>-->
+        <ResourceDictionary Source="/SJSControls;component/ControlStyles/BaseStyles.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

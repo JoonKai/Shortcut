@@ -48,8 +48,20 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\Basic\SJSShortcutControl.xaml.cs">
-      <DependentUpon>SJSShortcutControl.xaml</DependentUpon>
+    <Compile Include="Controls\Basic\SJS_BaseTextBox.xaml.cs">
+      <DependentUpon>SJS_BaseTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Basic\SJS_WaterMarkTextBox.xaml.cs">
+      <DependentUpon>SJS_WaterMarkTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Composite\MessageWindow.xaml.cs">
+      <DependentUpon>MessageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Composite\SJS_ShortcutControl.xaml.cs">
+      <DependentUpon>SJS_ShortcutControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Composite\SJS_TopBarControl.xaml.cs">
+      <DependentUpon>SJS_TopBarControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -64,6 +76,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UIConverters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="UIConverters\ValidatingBorderBrushConverter.cs" />
+    <Compile Include="UIConverters\ValidatingBorderThicknessConverter.cs" />
+    <Compile Include="UIConverters\WindowStateMarginConverter.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -74,17 +90,44 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Controls\Basic\SJSShortcutControl.xaml">
+    <Page Include="ControlStyles\BaseStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Styles\Generic.xaml">
+    <Page Include="Controls\Basic\SJS_BaseTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Basic\SJS_WaterMarkTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Composite\MessageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Composite\SJS_ShortcutControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Composite\SJS_TopBarControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controls\Composite\" />
+    <ProjectReference Include="..\SJS\SJS.csproj">
+      <Project>{8c4d7b56-bee1-414a-869a-68d7719f2856}</Project>
+      <Name>SJS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Assets\Images\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

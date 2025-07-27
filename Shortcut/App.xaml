@@ -6,7 +6,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/SJS;component/Colors/WPF/SJSColors.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/SJSControls;component/Styles/Generic.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/SJSControls;component/ControlStyles/Generic.xaml"/>
                 <ResourceDictionary>
                     <local:BootStrapper x:Key="BootStrapper"/>
                 </ResourceDictionary>
