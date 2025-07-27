@@ -7,7 +7,7 @@
         xmlns:controls="clr-namespace:SJSControls.Controls.Composite;assembly=SJSControls"
         xmlns:local="clr-namespace:Shortcut.Views"
         mc:Ignorable="d"
-        Title="MainView" Height="1200" Width="500" WindowStyle="None" Background="{StaticResource COLOR_DARK_GRAY}">
+        Title="MainView" Height="800" Width="1200" WindowStyle="None" Background="{StaticResource COLOR_DARK_GRAY}">
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="20" ResizeBorderThickness="2"/>
     </WindowChrome.WindowChrome>
@@ -30,7 +30,7 @@
         <Grid Grid.Row="2" Background="{StaticResource COLOR_BEIGE}" />
         <!--#endregion-->
         <!--#region 메인화면-->
-        <Grid Grid.Row="3">
+        <Grid Grid.Row="3" Margin="5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="300"/>
                 <ColumnDefinition Width="3"/>
@@ -38,11 +38,11 @@
             </Grid.ColumnDefinitions>
             <!--#region 좌측패널-->
             <Grid Grid.Column="0">
-                <shortcut:ShorcutView Grid.Row="3" Margin="5"/>
+                <shortcut:ShorcutView Grid.Row="3"/>
             </Grid>
             <!--#endregion-->
             <!--#region 메인-그리드스플리터-->
-            <GridSplitter Background="{StaticResource COLOR_DARK_ORANGE}" Grid.Column="1" Width="3" VerticalAlignment="Stretch" HorizontalAlignment="Center"/>
+            <GridSplitter Style="{StaticResource VerticalSplitterStyle}" Grid.Column="1" Width="3" VerticalAlignment="Stretch" HorizontalAlignment="Center"/>
             <!--#endregion-->
             <!--#region 우측패널-->
             <Grid Grid.Column="2">
