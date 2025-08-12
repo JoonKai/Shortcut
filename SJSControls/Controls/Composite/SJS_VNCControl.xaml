@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:base="clr-namespace:SJSControls.Controls.Basic"
              xmlns:local="clr-namespace:SJSControls.Controls.Composite"
-             mc:Ignorable="d" x:Name="root" FontSize="9">
+             mc:Ignorable="d" x:Name="root" FontSize="11">
     <UserControl.Resources>
         <Style x:Key="myButton" TargetType="{x:Type Button}">
             <Setter Property="BorderBrush" Value="DarkGray"/>
@@ -50,8 +50,8 @@
         </Style>
     </UserControl.Resources>
     <StackPanel Orientation="Horizontal">
-        <TextBlock Text="{Binding MyNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="10" FontSize="9" FontWeight="Bold"
-                   Foreground="LightGray" HorizontalAlignment="Center"/>
+        <TextBlock Text="{Binding MyNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="0"
+                   HorizontalAlignment="Center"/>
         <Button x:Name="RunButton" Style="{StaticResource myButton}" Content="VNC" Width="45" Command="{Binding RunVNC}" CommandParameter="{Binding ControlName}"/>
         <Popup x:Name="myPopup" 
                Placement="Relative" 
@@ -74,9 +74,9 @@
                 </Grid>
             </Border>
         </Popup>
-        <base:SJS_BaseTextBox x:Name="WT1" TBXHeight="20" TBXWidth="100"/>
+        <base:SJS_BaseTextBox x:Name="WT1" Margin="3 0 3 0" TBXHeight="20" TBXWidth="100"/>
         <TextBlock Style="{StaticResource BaseTextBlockStyle }" Foreground="{StaticResource COLOR_CORAL}" Text="IP주소 : " Width="35" Margin="2 0 2 0"/>
-        <base:SJS_BaseTextBox x:Name="WT2" Margin="1" TBXTextColor="{StaticResource COLOR_GOLD}" TBXHeight="20" TBXWidth="130"/>
+        <base:SJS_BaseTextBox x:Name="WT2" Margin="3 0 3 0" TBXTextColor="{StaticResource COLOR_GOLD}" TBXHeight="20" TBXWidth="130"/>
         <Button Style="{StaticResource EPIButton2}" Content="저장" Width="40" Command="{Binding SaveSetting}"/>
         <Button Style="{StaticResource EPIButton2}" Content="삭제" Width="40" Command="{Binding ClearTextbox}" CommandParameter="{Binding ControlName}"/>
     </StackPanel>

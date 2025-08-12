@@ -24,6 +24,7 @@
     <SolidColorBrush x:Key="COLOR_GOLD" Color="#FFD700"/>
     <SolidColorBrush x:Key="COLOR_BEIGE" Color="#F5F5DC"/>
     <SolidColorBrush x:Key="COLOR_HOTPINK" Color="#FF69B4"/>
+    <SolidColorBrush x:Key="COLOR_SALMON" Color="#FA8072"/>
     <!--#endregion-->
     <!--#region Dark Colors-->
     <SolidColorBrush x:Key="COLOR_DARK_GRAY" Color="#2A2F34"/>
