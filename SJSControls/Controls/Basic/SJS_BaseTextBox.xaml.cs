@@ -7,7 +7,7 @@ namespace SJSControls.Controls.Basic
     public partial class SJS_BaseTextBox : UserControl
     {
         #region 디펜던시프로퍼티
-        public static readonly DependencyProperty TBXHeightProperty = DependencyProperty.Register("TBXHeight", typeof(int), typeof(SJS_BaseTextBox), new PropertyMetadata(100));
+        public static readonly DependencyProperty TBXHeightProperty = DependencyProperty.Register("TBXHeight", typeof(int), typeof(SJS_BaseTextBox), new PropertyMetadata(20));
         public static readonly DependencyProperty TBXWidthProperty = DependencyProperty.Register("TBXWidth", typeof(int), typeof(SJS_BaseTextBox), new PropertyMetadata(100));
         public static new readonly DependencyProperty HorizontalContentAlignmentProperty = DependencyProperty.Register("HorizontalContentAlignment", typeof(HorizontalAlignment), typeof(SJS_WaterMarkTextBox), new UIPropertyMetadata(HorizontalAlignment.Left));
         public static readonly DependencyProperty TextProperty = DependencyProperty.Register("Text", typeof(string), typeof(SJS_BaseTextBox), new FrameworkPropertyMetadata("", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
@@ -17,6 +17,9 @@ namespace SJSControls.Controls.Basic
         public static readonly DependencyProperty TBXReadOnlyProperty = DependencyProperty.Register("TBXReadOnly", typeof(bool), typeof(SJS_BaseTextBox), new PropertyMetadata(false));
         public static readonly DependencyProperty TBXTextWrappingProperty = DependencyProperty.Register("TBXTextWrapping", typeof(TextWrapping), typeof(SJS_BaseTextBox), new UIPropertyMetadata(TextWrapping.NoWrap));
         public static readonly DependencyProperty TBXAcceptsReturnProperty = DependencyProperty.Register("TBXAcceptsReturn", typeof(bool), typeof(SJS_BaseTextBox), new UIPropertyMetadata(false));
+
+
+
         public int TBXWidth
         {
             get { return (int)GetValue(TBXWidthProperty); }
@@ -67,6 +70,9 @@ namespace SJSControls.Controls.Basic
             get { return (string)GetValue(TextProperty); }
             set { SetValue(TextProperty, value); }
         }
+
+
+
         #endregion
         public SJS_BaseTextBox()
         {

@@ -1,14 +1,12 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
-        <!--<ResourceDictionary Source="/SJSControls;component/Themes/EPIDatePicker.xaml"/>
-        <ResourceDictionary Source="/SJSControls;component/Themes/EPISlider.xaml"/>
-        <ResourceDictionary Source="/SJSControls;component/Themes/EPICombobox.xaml"/>
-        <ResourceDictionary Source="/SJSControls;component/Themes/EPIKoroRobot.xaml"/>
-        <ResourceDictionary Source="/SJSControls;component/Themes/Units/DayOfWeek.xaml"/>
-        <ResourceDictionary Source="/SJSControls;component/Themes/Units/CalendarBoxItem.xaml"/>
-        <ResourceDictionary Source="/SJSControls;component/Themes/Units/CalendarBox.xaml"/>
-        <ResourceDictionary Source="/SJSControls;component/Themes/Units/ChevronButton.xaml"/>-->
         <ResourceDictionary Source="/SJSControls;component/ControlStyles/BaseStyles.xaml"/>
+        <ResourceDictionary Source="/SJSControls;component/ControlStyles/ButtonStyles.xaml"/>
+        <ResourceDictionary Source="/SJSControls;component/ControlStyles/ScrollStyles.xaml"/>
+        <ResourceDictionary Source="/SJSControls;component/ControlStyles/SplitterStyles.xaml"/>
+        <ResourceDictionary Source="/SJSControls;component/ControlStyles/TabControlStyles.xaml"/>
+        <ResourceDictionary Source="/SJSControls;component/ControlStyles/TextBoxStyles.xaml"/>
+        <ResourceDictionary Source="/SJSControls;component/ControlStyles/TextBlockStyles.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

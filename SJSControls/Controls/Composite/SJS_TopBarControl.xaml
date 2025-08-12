@@ -17,7 +17,7 @@
                 <Setter Property="Background" Value="Transparent"/>
                 <Setter Property="Foreground" Value="White"/>
                 <Setter Property="Width" Value="20"/>
-                <Setter Property="Height" Value="20"/>
+                <Setter Property="Height" Value="22"/>
                 <Setter Property="DockPanel.Dock" Value="Right"/>
                 <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
                 <Setter Property="Template">
@@ -61,34 +61,34 @@
     <DockPanel x:Name="docpnlTitle" Background="{StaticResource COLOR_DARK_DEEPGRAY}" LastChildFill="False">
         <Image Margin="5 0 0 0" Width="15" Height="15"/>
         <TextBlock FontWeight="Bold" FontSize="13" Margin="5 0 0 0 "/>
-        <Button x:Name="ExitButton" Width="50" Margin="0 0 5 0">
+        <Button x:Name="ExitButton" Click="ExitButton_Click" Width="60" Margin="0 0 5 0">
             <Button.Content>
                 <StackPanel Orientation="Horizontal">
-                    <Image Margin="0 0 5 0" Source="/SJSControls;component/Assets/Images/close.png"  Width="15" Height="15" HorizontalAlignment="Left"/>
+                    <Image Margin="0 0 5 0" Source="/SJSControls;component/Assets/Images/close.png"  Width="19" Height="19" HorizontalAlignment="Left"/>
                     <TextBlock Style="{StaticResource BTNTextBlock}" HorizontalAlignment="Right" Text="종료"/>
                 </StackPanel>
             </Button.Content>
         </Button>
-        <Button x:Name="MaximizeButton" Width="60" Visibility="{Binding IsVisibility,ElementName=root ,Converter={StaticResource BoolToVis}}" >
+        <Button x:Name="MaximizeButton" Click="MaximizeButton_Click" Width="70" Visibility="{Binding IsVisibility,ElementName=root ,Converter={StaticResource BoolToVis}}" >
             <Button.Content>
                 <StackPanel Orientation="Horizontal">
-                    <Image Margin="0 0 5 0" Source="/SJSControls;component/Assets/Images/maximize.png" Width="15" Height="15" HorizontalAlignment="Left"/>
+                    <Image Margin="0 0 5 0" Source="/SJSControls;component/Assets/Images/maximize.png" Width="18" Height="18" HorizontalAlignment="Left"/>
                     <TextBlock Style="{StaticResource BTNTextBlock}" HorizontalAlignment="Right" Text="최대화"/>
                 </StackPanel>
             </Button.Content>
         </Button>
-        <Button x:Name="MinimizeButton" Width="60">
+        <Button x:Name="MinimizeButton" Click="MinimizeButton_Click" Width="70">
             <Button.Content>
                 <StackPanel Orientation="Horizontal">
-                    <Image Margin="0 0 5 0" Source="/SJSControls;component/Assets/Images/minimize.png" Width="15" Height="15" HorizontalAlignment="Left"/>
+                    <Image Margin="0 0 5 0" Source="/SJSControls;component/Assets/Images/minimize.png" Width="18" Height="18" HorizontalAlignment="Left"/>
                     <TextBlock Style="{StaticResource BTNTextBlock}" HorizontalAlignment="Right" Text="최소화"/>
                 </StackPanel>
             </Button.Content>
         </Button>
-        <Button x:Name="SettingsButton" Width="70" Margin="0 0 20 0">
+        <Button x:Name="SettingsButton" Width="80" Margin="0 0 20 0">
             <Button.Content>
                 <StackPanel Orientation="Horizontal">
-                    <Image Margin="0 0 5 0" Source="/SJSControls;component/Assets/Images/settings.png"  Width="15" Height="15" HorizontalAlignment="Left"/>
+                    <Image Margin="0 0 5 0" Source="/SJSControls;component/Assets/Images/settings.png"  Width="18" Height="18" HorizontalAlignment="Left"/>
                     <TextBlock Style="{StaticResource BTNTextBlock}" HorizontalAlignment="Right" Text="Settings"/>
                 </StackPanel>
             </Button.Content>

@@ -155,7 +155,7 @@
                     </Grid>
                 </ScrollViewer>
             </TabItem>
-            <TabItem Header="폴더" Foreground="{StaticResource COLOR_DARK_CYAN}">
+            <TabItem Header="VNC" Foreground="{StaticResource COLOR_DARK_CYAN}">
                 <ScrollViewer VerticalScrollBarVisibility="Hidden">
                     <Grid Margin="0 5 5 5">
                         <Grid.RowDefinitions>
@@ -190,36 +190,36 @@
                             <RowDefinition Height="25"/>
                             <RowDefinition Height="25"/>
                         </Grid.RowDefinitions>
-                        <control:SJS_ShortcutControl Grid.Row="0" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="1" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="2" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="3" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="4" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="5" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="6" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="7" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="8" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="9" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="10" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="11" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="12" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="13" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="14" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="15" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="16" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="17" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="18" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="19" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="20" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="21" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="22" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="23" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="24" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="25" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="26" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="27" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="28" Height="23"/>
-                        <control:SJS_ShortcutControl Grid.Row="29" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="0" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="1" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="2" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="3" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="4" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="5" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="6" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="7" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="8" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="9" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="10" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="11" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="12" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="13" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="14" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="15" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="16" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="17" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="18" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="19" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="20" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="21" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="22" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="23" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="24" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="25" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="26" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="27" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="28" Height="23"/>
+                        <control:SJS_VNCControl Grid.Row="29" Height="23"/>
                     </Grid>
                 </ScrollViewer>
             </TabItem>

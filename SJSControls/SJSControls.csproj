@@ -60,8 +60,14 @@
     <Compile Include="Controls\Composite\SJS_ShortcutControl.xaml.cs">
       <DependentUpon>SJS_ShortcutControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Composite\SJS_StatusBarControl.xaml.cs">
+      <DependentUpon>SJS_StatusBarControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Composite\SJS_TopBarControl.xaml.cs">
       <DependentUpon>SJS_TopBarControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Composite\SJS_VNCControl.xaml.cs">
+      <DependentUpon>SJS_VNCControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -80,6 +86,7 @@
     <Compile Include="UIConverters\ValidatingBorderBrushConverter.cs" />
     <Compile Include="UIConverters\ValidatingBorderThicknessConverter.cs" />
     <Compile Include="UIConverters\WindowStateMarginConverter.cs" />
+    <Compile Include="Utils\UsingVNC.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -91,6 +98,30 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="ControlStyles\BaseStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\ScrollStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\SplitterStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\TabControlStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\TextBlockStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\TextBoxStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -114,7 +145,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\Composite\SJS_StatusBarControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\Composite\SJS_TopBarControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Composite\SJS_VNCControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,6 +171,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Images\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\resize.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
