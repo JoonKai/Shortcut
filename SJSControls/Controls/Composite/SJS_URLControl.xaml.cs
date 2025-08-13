@@ -128,9 +128,9 @@ namespace SJSControls.Controls.Composite
                     });
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                MessageBox.Show("에러가 발생했습니다.");
+                MessageBox.Show(e.Message+"에러가 발생했습니다.");
             }
 
         }

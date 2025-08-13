@@ -120,7 +120,7 @@ namespace SJSControls.Controls.Composite
             }
             catch (Exception e)
             {
-                Helper.SJSLog.Error("RunVNCProcess Error");
+                Helper.SJSLog.Error(e.Message+"RunVNCProcess Error");
             }
             
         }
