@@ -8,5 +8,6 @@
         <ResourceDictionary Source="/SJSControls;component/ControlStyles/TabControlStyles.xaml"/>
         <ResourceDictionary Source="/SJSControls;component/ControlStyles/TextBoxStyles.xaml"/>
         <ResourceDictionary Source="/SJSControls;component/ControlStyles/TextBlockStyles.xaml"/>
+        <ResourceDictionary Source="/SJSControls;component/ControlStyles/RadioButtonStyles.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

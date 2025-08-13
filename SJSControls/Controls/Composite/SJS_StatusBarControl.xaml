@@ -6,6 +6,6 @@
              xmlns:local="clr-namespace:SJSControls.Controls.Composite"
              mc:Ignorable="d">
     <DockPanel Background="{StaticResource COLOR_DARK_DEEPGRAY}">
-        <Image VerticalAlignment="Bottom" Source="/SJSControls;component/Assets/Images/resize.png"  Width="10" Height="10" HorizontalAlignment="Right"/>
+        <Image VerticalAlignment="Bottom"  Width="10" Height="10" HorizontalAlignment="Right"/>
     </DockPanel>
 </UserControl>

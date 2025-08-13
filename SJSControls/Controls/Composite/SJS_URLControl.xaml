@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SJSControls.Controls.Composite"
              xmlns:base="clr-namespace:SJSControls.Controls.Basic"
-             mc:Ignorable="d" x:Name="root" FontSize="11">
+             mc:Ignorable="d" x:Name="root" FontSize="13">
     <UserControl.Resources>
         <Style x:Key="myButton" TargetType="{x:Type Button}">
             <Setter Property="BorderBrush" Value="DarkGray"/>

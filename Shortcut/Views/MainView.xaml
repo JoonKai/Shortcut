@@ -20,6 +20,8 @@
         <!--#region 탑바-->
         <controls:SJS_TopBarControl VerticalAlignment="Center" Grid.Row="0"/>
         <!--#endregion-->
+        
+        <!--#region 메인 보드-->
         <Border Grid.Row="1" Margin="2" BorderBrush="{StaticResource COLOR_SALMON}" BorderThickness=".5">
             <Grid Margin="1">
                 <Grid.ColumnDefinitions>
@@ -27,6 +29,7 @@
                     <ColumnDefinition Width="3"/>
                     <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
+                <!--#region 좌측 보드-->
                 <Grid Grid.Column="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="150"/>
@@ -35,32 +38,58 @@
                     </Grid.RowDefinitions>
                     <!--#region 상단메뉴-->
                     <Grid Grid.Row="0">
-
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <GroupBox Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
+                            <StackPanel Orientation="Vertical">
+                                <RadioButton x:Name="RB_Radio1" Style="{StaticResource BaseRadioButtonStyle}" Content="모니터1"/>
+                                <RadioButton x:Name="RB_Radio2" Style="{StaticResource BaseRadioButtonStyle}" Content="모니터2"/>
+                            </StackPanel>
+                        </GroupBox>
+                        <CheckBox Grid.Column="0" Grid.Row="2" x:Name="CHK_VerticalMode" Checked="CHK_VerticalMode_Checked" Unchecked="CHK_VerticalMode_Unchecked" Content="세로모드"/>
+                        <CheckBox Grid.Column="0" Grid.Row="3" x:Name="CHK_AlwaysTopMode" Checked="CHK_AlwaysTopMode_Checked" Unchecked="CHK_AlwaysTopMode_Unchecked" Content="항상위에"/>
+                        <CheckBox Grid.Column="0" Grid.Row="4" x:Name="CHK_MinimizeMode" Checked="CHK_MinimizeMode_Checked" Unchecked="CHK_MinimizeMode_Unchecked" Content="최소화모드"/>
+                        <ToggleButton Grid.Column="0" Grid.Row="5" x:Name="TGB_OpenAndClose" Content="열기" PreviewMouseMove="TGB_OpenAndClose_PreviewMouseMove" IsChecked="True" Checked="TGB_OpenAndClose_Checked" Unchecked="TGB_OpenAndClose_Unchecked"/>
                     </Grid>
                     <!--#endregion-->
+
                     <!--#region 라인-->
                     <Grid Grid.Row="1" Background="{StaticResource COLOR_BEIGE}" />
                     <!--#endregion-->
-                    <!--#region 메인화면-->
+
+                    <!--#region 좌측 바로가기 메인화면-->
                     <Grid Grid.Row="2" Margin="5">
-                        <!--#region 좌측패널-->
                         <Grid Grid.Column="0">
                             <shortcut:ShorcutView Grid.Row="3"/>
                         </Grid>
-                        <!--#endregion-->
                     </Grid>
-
-                    <Grid Grid.Column="2">
-
-                    </Grid>
+                    <!--#endregion-->
                 </Grid>
+                <!--#endregion-->
+                
+                <!--#region 그리드스플리터-->
                 <GridSplitter Style="{StaticResource VerticalSplitterStyle}" Grid.Column="1" Width="3" VerticalAlignment="Stretch" HorizontalAlignment="Center"/>
+                <!--#endregion-->
+                
+                <!--#region 우측 보드-->
                 <Grid Grid.Column="2">
-                    
+
                 </Grid>
+                <!--#endregion-->
             </Grid>
-            
         </Border>
+        <!--#endregion-->
+        
         <!--#region 스테이터스바-->
         <Grid Grid.Row="3">
             <controls:SJS_StatusBarControl/>
