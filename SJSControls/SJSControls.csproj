@@ -66,6 +66,9 @@
     <Compile Include="Controls\Composite\SJS_TopBarControl.xaml.cs">
       <DependentUpon>SJS_TopBarControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Composite\SJS_URLControl.xaml.cs">
+      <DependentUpon>SJS_URLControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Composite\SJS_VNCControl.xaml.cs">
       <DependentUpon>SJS_VNCControl.xaml</DependentUpon>
     </Compile>
@@ -150,6 +153,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Composite\SJS_TopBarControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Composite\SJS_URLControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
