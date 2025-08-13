@@ -19,7 +19,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="Part_Border" Margin="1" BorderBrush="{StaticResource COLOR_KHAKI}" BorderThickness="2" Background="{TemplateBinding Background}">
+                        <Border x:Name="Part_Border" Margin="1" BorderBrush="{StaticResource COLOR_GOLD}" BorderThickness="2" Background="{TemplateBinding Background}">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.Foreground="{TemplateBinding Foreground}" ContentSource="Content"/>
                         </Border>
                         <ControlTemplate.Triggers>

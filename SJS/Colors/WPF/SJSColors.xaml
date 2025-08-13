@@ -27,7 +27,7 @@
     <SolidColorBrush x:Key="COLOR_SALMON" Color="#FA8072"/>
     <!--#endregion-->
     <!--#region Dark Colors-->
-    <SolidColorBrush x:Key="COLOR_DARK_GRAY" Color="#2A2F34"/>
+    <SolidColorBrush x:Key="COLOR_DARK_GRAY" Color="#FF3B3E42"/>
     <SolidColorBrush x:Key="COLOR_DARK_DEEPGRAY" Color="#272727"/>
     <SolidColorBrush x:Key="COLOR_DARK_ORANGE" Color="#FFF58513"/>
     <SolidColorBrush x:Key="COLOR_DARK_BLUE1" Color="#0B314A"/>

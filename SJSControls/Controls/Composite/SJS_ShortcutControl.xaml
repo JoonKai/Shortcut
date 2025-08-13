@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SJSControls.Controls.Composite"
              xmlns:controls="clr-namespace:SJSControls.Controls.Basic"
-             mc:Ignorable="d" x:Name="root">
+             mc:Ignorable="d" FontSize="13" x:Name="root">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -16,13 +16,13 @@
                 <Setter Property="BorderThickness" Value="3"/>
                 <Setter Property="Width" Value="{Binding BTNWidth, ElementName=root}"/>
                 <Setter Property="Height" Value="24"/>
-                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontSize" Value="13"/>
                 <Setter Property="Background" Value="Transparent"/>
-                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Foreground" Value="{StaticResource COLOR_TAN}"/>
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type Button}">
-                            <Border x:Name="Part_Border" Margin="1" BorderBrush="{StaticResource COLOR_LIME}" BorderThickness="2" Background="{TemplateBinding Background}">
+                            <Border x:Name="Part_Border" Margin="1" BorderBrush="{StaticResource COLOR_TAN}" BorderThickness="2" Background="{TemplateBinding Background}">
                                 <ContentPresenter HorizontalAlignment="Center" TextElement.Foreground="{TemplateBinding Foreground}" ContentSource="Content"/>
                             </Border>
                             <ControlTemplate.Triggers>
@@ -62,7 +62,7 @@
         </ResourceDictionary>
     </UserControl.Resources>
     <StackPanel Orientation="Horizontal">
-        <Button  x:Name="RunButton" Style="{StaticResource myButton}" Content="실행" Command="{Binding RunProgram}" CommandParameter="{Binding ControlName}"/>
+        <Button  x:Name="RunButton" Width="45" Style="{StaticResource myButton}" Content="RUN" Command="{Binding RunProgram}" CommandParameter="{Binding ControlName}"/>
         <Popup x:Name="myPopup" 
            Placement="Relative" 
            AllowsTransparency="True" 
@@ -84,12 +84,12 @@
                 </Grid>
             </Border>
         </Popup>
-        <controls:SJS_BaseTextBox x:Name="WT1" Style="{StaticResource Title}"/>
-        <TextBlock Width="40"/>
-        <controls:SJS_BaseTextBox x:Name="WT2" Style="{StaticResource Path}" TBXReadOnly="True" Height="22"/>
-        <Button Style="{StaticResource EPIButton2}" Content="프로그램" Width="70" Command="{Binding OpenPath}"/>
-        <Button Style="{StaticResource EPIButton2}" Content="폴더" Width="40" Command="{Binding OpenFolderPath}"/>
-        <Button Style="{StaticResource EPIButton2}" Content="저장" Width="40" Command="{Binding SaveSetting}"/>
-        <Button Style="{StaticResource EPIButton2}" Content="삭제" Width="40" Command="{Binding ClearTextBox}"/>
+        <controls:SJS_BaseTextBox x:Name="WT1" Margin="3 0 3 0" Style="{StaticResource Title}"/>
+        <TextBlock Text="경로 : " Style="{StaticResource BaseTextBlockStyle}" Foreground="{StaticResource COLOR_TAN}" Width="45" Margin="2 0 2 0"/>
+        <controls:SJS_BaseTextBox x:Name="WT2" Margin="3 0 3 0" Style="{StaticResource Path}" TBXReadOnly="True" Height="22"/>
+        <Button Style="{StaticResource EPIButton2}" Foreground="{StaticResource COLOR_TAN}" Content="프로그램" Width="60" Command="{Binding OpenPath}"/>
+        <Button Style="{StaticResource EPIButton2}" Foreground="{StaticResource COLOR_TAN}" Content="폴더" Width="40" Command="{Binding OpenFolderPath}"/>
+        <Button Style="{StaticResource EPIButton2}" Foreground="{StaticResource COLOR_TAN}" Content="저장" Width="40" Command="{Binding SaveSetting}"/>
+        <Button Style="{StaticResource EPIButton2}" Foreground="{StaticResource COLOR_TAN}" Content="삭제" Width="40" Command="{Binding ClearTextBox}"/>
     </StackPanel>
 </UserControl>

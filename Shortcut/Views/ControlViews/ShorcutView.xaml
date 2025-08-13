@@ -19,7 +19,7 @@
         </Grid.RowDefinitions>
         <!--#region 상단 탭컨트롤-->
         <TabControl Grid.Row="0" Background="Transparent" Style="{StaticResource MyTabControl}">
-            <TabItem Header="Programs" Foreground="{StaticResource COLOR_RED}">
+            <TabItem Header="Programs" Foreground="{StaticResource COLOR_TAN}">
                 <ScrollViewer VerticalScrollBarVisibility="Hidden">
                     <Grid Margin="0 5 5 5">
                         <Grid.RowDefinitions>
