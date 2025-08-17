@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:shortcut="clr-namespace:Shortcut.Views.ControlViews"
         xmlns:controls="clr-namespace:SJSControls.Controls.Composite;assembly=SJSControls"
+        xmlns:viewmodels="clr-namespace:Shortcut.ViewModels"
+        d:DataContext="{d:DesignInstance viewmodels:MainViewModel, IsDesignTimeCreatable=True}"
         xmlns:local="clr-namespace:Shortcut.Views"
         mc:Ignorable="d"
-        Title="MainView" Height="800" Width="1200" WindowStyle="None" Background="{StaticResource COLOR_DARK_GRAY}">
+        Title="MainView"  WindowStyle="None" Background="{StaticResource COLOR_DARK_GRAY}" ResizeMode="CanResizeWithGrip" SizeChanged="Window_SizeChanged" PreviewMouseMove="TGB_OpenAndClose_PreviewMouseMove">
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="20" ResizeBorderThickness="2"/>
     </WindowChrome.WindowChrome>
@@ -50,16 +52,33 @@
                             <RowDefinition Height="1*"/>
                             <RowDefinition Height="1*"/>
                         </Grid.RowDefinitions>
-                        <GroupBox Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
-                            <StackPanel Orientation="Vertical">
-                                <RadioButton x:Name="RB_Radio1" Style="{StaticResource BaseRadioButtonStyle}" Content="모니터1"/>
-                                <RadioButton x:Name="RB_Radio2" Style="{StaticResource BaseRadioButtonStyle}" Content="모니터2"/>
-                            </StackPanel>
-                        </GroupBox>
+                        <RadioButton Grid.Column="0" Grid.Row="0" GroupName="RadioGroup" x:Name="RB_Radio1" Style="{StaticResource BaseRadioButtonStyle}" Content="모니터1"/>
+                        <RadioButton Grid.Column="0" Grid.Row="1" GroupName="RadioGroup" x:Name="RB_Radio2" Style="{StaticResource BaseRadioButtonStyle}" Content="모니터2"/>
                         <CheckBox Grid.Column="0" Grid.Row="2" x:Name="CHK_VerticalMode" Checked="CHK_VerticalMode_Checked" Unchecked="CHK_VerticalMode_Unchecked" Content="세로모드"/>
                         <CheckBox Grid.Column="0" Grid.Row="3" x:Name="CHK_AlwaysTopMode" Checked="CHK_AlwaysTopMode_Checked" Unchecked="CHK_AlwaysTopMode_Unchecked" Content="항상위에"/>
                         <CheckBox Grid.Column="0" Grid.Row="4" x:Name="CHK_MinimizeMode" Checked="CHK_MinimizeMode_Checked" Unchecked="CHK_MinimizeMode_Unchecked" Content="최소화모드"/>
                         <ToggleButton Grid.Column="0" Grid.Row="5" x:Name="TGB_OpenAndClose" Content="열기" PreviewMouseMove="TGB_OpenAndClose_PreviewMouseMove" IsChecked="True" Checked="TGB_OpenAndClose_Checked" Unchecked="TGB_OpenAndClose_Unchecked"/>
+                        <Popup x:Name="myPopup" 
+                            Placement="Relative" 
+                            AllowsTransparency="True" 
+                            PopupAnimation="Fade"
+                            HorizontalOffset="0"
+                            VerticalOffset="0">
+                            <Popup.Style>
+                                <Style  TargetType="{x:Type Popup}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=toggle,  Path=IsMouseOver}" Value="True">
+                                            <Setter Property="IsOpen" Value="True"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Popup.Style>
+                            <Border IsHitTestVisible="False" Background="{StaticResource COLOR_GRAY}" BorderBrush="Gray" BorderThickness="1" CornerRadius="3">
+                                <Grid>
+                                    <TextBlock Text="단축키 : Ctrl + Q" Foreground="{StaticResource COLOR_WHITE}"  Margin="10,5" VerticalAlignment="Center"/>
+                                </Grid>
+                            </Border>
+                        </Popup>
                     </Grid>
                     <!--#endregion-->
 

@@ -8,9 +8,6 @@ using System.Windows.Interop;
 
 namespace Shortcut.Views
 {
-    /// <summary>
-    /// MainView.xaml에 대한 상호 작용 논리
-    /// </summary>
     public partial class MainView : Window
     {
         public int HeightPreview { get; set; }
@@ -186,7 +183,6 @@ namespace Shortcut.Views
         private void UISettings()
         {
             ReadSettings();
-
         }
         private void MonitorSetting(int monitor)
         {
@@ -331,13 +327,13 @@ namespace Shortcut.Views
         }
         private void TGB_OpenAndClose_PreviewMouseMove(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            //if (myPopup.DataContext == null || myPopup.DataContext != sender)
-            //{
-            //    myPopup.PlacementTarget = sender as UIElement;
-            //}
-            //Point mouse = e.GetPosition(sender as UIElement);
-            //myPopup.HorizontalOffset = mouse.X;
-            //myPopup.VerticalOffset = mouse.Y + 30;
+            if (myPopup.DataContext == null || myPopup.DataContext != sender)
+            {
+                myPopup.PlacementTarget = sender as UIElement;
+            }
+            Point mouse = e.GetPosition(sender as UIElement);
+            myPopup.HorizontalOffset = mouse.X;
+            myPopup.VerticalOffset = mouse.Y + 30;
         }
     }
 }
