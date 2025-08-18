@@ -9,7 +9,7 @@
         d:DataContext="{d:DesignInstance viewmodels:MainViewModel, IsDesignTimeCreatable=True}"
         xmlns:local="clr-namespace:Shortcut.Views"
         mc:Ignorable="d"
-        Title="MainView"  WindowStyle="None" Background="{StaticResource COLOR_DARK_GRAY}" ResizeMode="CanResizeWithGrip" SizeChanged="Window_SizeChanged" PreviewMouseMove="TGB_OpenAndClose_PreviewMouseMove">
+        Title="MainView" AllowsTransparency="True"  WindowStyle="None" Background="{StaticResource COLOR_DARK_GRAY}" ResizeMode="CanResizeWithGrip" SizeChanged="Window_SizeChanged" PreviewMouseMove="TGB_OpenAndClose_PreviewMouseMove">
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="20" ResizeBorderThickness="2"/>
     </WindowChrome.WindowChrome>
