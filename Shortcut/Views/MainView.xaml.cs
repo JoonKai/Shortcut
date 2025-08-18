@@ -186,6 +186,7 @@ namespace Shortcut.Views
         }
         private void MonitorSetting(int monitor)
         {
+            monitor = 2;
             this.WindowStartupLocation = WindowStartupLocation.Manual;
             System.Drawing.Rectangle workingArea = System.Windows.Forms.Screen.AllScreens[monitor].WorkingArea;
             this.Left = workingArea.Left;
