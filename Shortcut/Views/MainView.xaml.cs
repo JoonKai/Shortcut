@@ -48,7 +48,7 @@ namespace Shortcut.Views
             }
             else
             {
-                this.MaxWidth = 600;
+                ////this.MaxWidth = 600;
 
             }
         }
@@ -200,24 +200,35 @@ namespace Shortcut.Views
             CHK_MinimizeMode.IsChecked = Helper.SJSIni.Read("Nomal", "Minimize").ToString() == "True" ? true : false;
             RB_Radio1.IsChecked = Helper.SJSIni.Read("Nomal", "Radio1").ToString() == "True" ? true : false;
             RB_Radio2.IsChecked = Helper.SJSIni.Read("Nomal", "Radio2").ToString() == "True" ? true : false;
+            RB_Radio3.IsChecked = Helper.SJSIni.Read("Nomal", "Radio3").ToString() == "True" ? true : false;
 
             if (CHK_VerticalMode.IsChecked == true)
             {
                 RB_Radio1.IsEnabled = true;
                 RB_Radio2.IsEnabled = true;
+                RB_Radio3.IsEnabled = true;
                 if (RB_Radio1.IsChecked == true)
                 {
                     MonitorSetting(0);
                 }
-                else
+                else if(RB_Radio2.IsChecked == true)
                 {
                     MonitorSetting(1);
+                }
+                else if (RB_Radio3.IsChecked == true)
+                {
+                    MonitorSetting(2);
+                }
+                else
+                {
+                    MonitorSetting(0);
                 }
             }
             else
             {
                 RB_Radio1.IsEnabled = false;
                 RB_Radio2.IsEnabled = false;
+                RB_Radio3.IsEnabled = false;
             }
 
         }
@@ -270,6 +281,7 @@ namespace Shortcut.Views
             {
                 Helper.SJSIni.Write("Nomal", "Radio1", "True");
                 Helper.SJSIni.Write("Nomal", "Radio2", "False");
+                Helper.SJSIni.Write("Nomal", "Radio3", "False");
                 ReadSettings();
             }
         }
@@ -280,6 +292,17 @@ namespace Shortcut.Views
             {
                 Helper.SJSIni.Write("Nomal", "Radio2", "True");
                 Helper.SJSIni.Write("Nomal", "Radio1", "False");
+                Helper.SJSIni.Write("Nomal", "Radio3", "False");
+                ReadSettings();
+            }
+        }
+        private void Radio3_Checked(object sender, RoutedEventArgs e)
+        {
+            if (RB_Radio3.IsChecked == true)
+            {
+                Helper.SJSIni.Write("Nomal", "Radio3", "True");
+                Helper.SJSIni.Write("Nomal", "Radio1", "False");
+                Helper.SJSIni.Write("Nomal", "Radio2", "False");
                 ReadSettings();
             }
         }

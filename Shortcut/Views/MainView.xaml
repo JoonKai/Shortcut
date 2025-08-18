@@ -9,7 +9,7 @@
         d:DataContext="{d:DesignInstance viewmodels:MainViewModel, IsDesignTimeCreatable=True}"
         xmlns:local="clr-namespace:Shortcut.Views"
         mc:Ignorable="d"
-        Title="MainView" AllowsTransparency="True"  WindowStyle="None" Background="{StaticResource COLOR_DARK_GRAY}" ResizeMode="CanResizeWithGrip" SizeChanged="Window_SizeChanged" PreviewMouseMove="TGB_OpenAndClose_PreviewMouseMove">
+        Title="MainView" AllowsTransparency="True"   WindowStyle="None" Background="{StaticResource COLOR_DARK_GRAY}" ResizeMode="CanResizeWithGrip" SizeChanged="Window_SizeChanged" PreviewMouseMove="TGB_OpenAndClose_PreviewMouseMove">
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="20" ResizeBorderThickness="2"/>
     </WindowChrome.WindowChrome>
@@ -52,12 +52,13 @@
                             <RowDefinition Height="1*"/>
                             <RowDefinition Height="1*"/>
                         </Grid.RowDefinitions>
-                        <RadioButton Grid.Column="0" Grid.Row="0" GroupName="RadioGroup" x:Name="RB_Radio1" Style="{StaticResource BaseRadioButtonStyle}" Content="모니터1"/>
-                        <RadioButton Grid.Column="0" Grid.Row="1" GroupName="RadioGroup" x:Name="RB_Radio2" Style="{StaticResource BaseRadioButtonStyle}" Content="모니터2"/>
-                        <CheckBox Grid.Column="0" Grid.Row="2" x:Name="CHK_VerticalMode" Checked="CHK_VerticalMode_Checked" Unchecked="CHK_VerticalMode_Unchecked" Content="세로모드"/>
-                        <CheckBox Grid.Column="0" Grid.Row="3" x:Name="CHK_AlwaysTopMode" Checked="CHK_AlwaysTopMode_Checked" Unchecked="CHK_AlwaysTopMode_Unchecked" Content="항상위에"/>
-                        <CheckBox Grid.Column="0" Grid.Row="4" x:Name="CHK_MinimizeMode" Checked="CHK_MinimizeMode_Checked" Unchecked="CHK_MinimizeMode_Unchecked" Content="최소화모드"/>
-                        <ToggleButton Grid.Column="0" Grid.Row="5" x:Name="TGB_OpenAndClose" Content="열기" PreviewMouseMove="TGB_OpenAndClose_PreviewMouseMove" IsChecked="True" Checked="TGB_OpenAndClose_Checked" Unchecked="TGB_OpenAndClose_Unchecked"/>
+                        <RadioButton Checked="Radio1_Checked" Grid.Column="0" Grid.Row="0" GroupName="RadioGroup" x:Name="RB_Radio1" Style="{StaticResource BaseRadioButtonStyle}" Content="모니터1"/>
+                        <RadioButton Checked="Radio2_Checked" Grid.Column="0" Grid.Row="1" GroupName="RadioGroup" x:Name="RB_Radio2" Style="{StaticResource BaseRadioButtonStyle}" Content="모니터2"/>
+                        <RadioButton Checked="Radio3_Checked" Grid.Column="0" Grid.Row="2" GroupName="RadioGroup" x:Name="RB_Radio3" Style="{StaticResource BaseRadioButtonStyle}" Content="모니터3"/>
+                        <CheckBox Grid.Column="0" Grid.Row="3" x:Name="CHK_VerticalMode" Checked="CHK_VerticalMode_Checked" Unchecked="CHK_VerticalMode_Unchecked" Content="세로모드"/>
+                        <CheckBox Grid.Column="0" Grid.Row="4" x:Name="CHK_AlwaysTopMode" Checked="CHK_AlwaysTopMode_Checked" Unchecked="CHK_AlwaysTopMode_Unchecked" Content="항상위에"/>
+                        <CheckBox Grid.Column="0" Grid.Row="5" x:Name="CHK_MinimizeMode" Checked="CHK_MinimizeMode_Checked" Unchecked="CHK_MinimizeMode_Unchecked" Content="최소화모드"/>
+                        <ToggleButton Grid.Column="1" Grid.Row="0" x:Name="TGB_OpenAndClose" Content="열기" PreviewMouseMove="TGB_OpenAndClose_PreviewMouseMove" IsChecked="True" Checked="TGB_OpenAndClose_Checked" Unchecked="TGB_OpenAndClose_Unchecked"/>
                         <Popup x:Name="myPopup" 
                             Placement="Relative" 
                             AllowsTransparency="True" 
