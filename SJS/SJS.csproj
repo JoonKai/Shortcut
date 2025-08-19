@@ -41,7 +41,9 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -62,8 +64,9 @@
     <Compile Include="Helpers\JSONHelper.cs" />
     <Compile Include="Helpers\LOGHelper.cs" />
     <Compile Include="Helpers\MATHHelper.cs" />
-    <Compile Include="Helpers\MONITORHelper.cs" />
     <Compile Include="Helpers\ROOTHelper.cs" />
+    <Compile Include="Models\Monitors.cs" />
+    <Compile Include="Utility\MonitorUtility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

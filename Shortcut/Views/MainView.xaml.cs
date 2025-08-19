@@ -10,6 +10,7 @@ namespace Shortcut.Views
 {
     public partial class MainView : Window
     {
+        private MonitorUtility monitorUtility = new MonitorUtility();
         public int HeightPreview { get; set; }
         public int HeightVNC { get; set; } = 50;
         public int HeightSplitter { get; set; } = 50;
@@ -46,11 +47,11 @@ namespace Shortcut.Views
             {
                 this.MaxWidth = 65;
             }
-            else
-            {
-                ////this.MaxWidth = 600;
+            //else
+            //{
+            //    ////this.MaxWidth = 600;
 
-            }
+            //}
         }
         protected override void OnSourceInitialized(EventArgs e)
         {
@@ -186,13 +187,27 @@ namespace Shortcut.Views
         }
         private void MonitorSetting(int monitor)
         {
-            monitor = 2;
+            ＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦ
+            monitor = 1;
+           　
             this.WindowStartupLocation = WindowStartupLocation.Manual;
             System.Drawing.Rectangle workingArea = System.Windows.Forms.Screen.AllScreens[monitor].WorkingArea;
             this.Left = workingArea.Left;
             this.Top = workingArea.Top;
             this.Width = workingArea.Width;
             this.Height = workingArea.Height;
+
+
+            bool vertical = (CHK_VerticalMode.IsChecked == true);
+
+            // 세로 모드일 때 기존처럼 MaxWidth는 65 고정 유지
+            double verticalMaxWidth = 65.0;
+
+            // 펼침(전체)로 배치: 토글에 따른 높이 고정이 필요하면 collapsedFixedHeight에 값 전달
+            double? collapsedFixedHeight = null;
+
+            // 유틸 호출로 픽셀→DIP 변환 포함해서 정확히 배치
+            monitorUtility.ApplyWindowToMonitor(this, monitor, vertical, verticalMaxWidth, collapsedFixedHeight);
         }
         private void ReadSettings()
         {

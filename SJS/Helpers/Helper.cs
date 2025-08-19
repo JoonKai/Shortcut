@@ -8,7 +8,6 @@
         public static LOGHelper SJSLog { get; private set; }
         public static MATHHelper SJSMath { get; private set; }
         public static ROOTHelper SJSRoot { get; private set; }
-        public static MONITORHelper SJSMonitor { get; private set; }
         static Helper()
         {
             SJSData = new DATAHelper();
@@ -17,7 +16,6 @@
             SJSLog = new LOGHelper();
             SJSMath = new MATHHelper();
             SJSRoot = new ROOTHelper();
-            SJSMonitor = new MONITORHelper();
         }
     }
 }
