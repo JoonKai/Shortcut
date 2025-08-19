@@ -10,12 +10,12 @@ namespace Shortcut.Views
 {
     public partial class MainView : Window
     {
-        private MonitorUtility monitorUtility = new MonitorUtility();
+        #region Properties /////
+
         public int HeightPreview { get; set; }
         public int HeightVNC { get; set; } = 50;
         public int HeightSplitter { get; set; } = 50;
         public int HeightProgram { get; set; } = 50;
-
         public WindowInteropHelper wi { get; set; }
 
         [DllImport("User32.dll")]
@@ -29,70 +29,13 @@ namespace Shortcut.Views
         private static extern bool UnregisterHotKey(
             [In] IntPtr hWnd,
             [In] int id);
-
-
-
         private HwndSource _source;
+
         private const int HOTKEY_ID = 9000;
 
+        #endregion
 
-        public MainView()
-        {
-            InitializeComponent();
-
-            this.MaxHeight = SystemParameters.VirtualScreenHeight;
-            this.MinWidth = 65;
-            UISettings();
-            if (CHK_VerticalMode.IsChecked == true)
-            {
-                this.MaxWidth = 65;
-            }
-            //else
-            //{
-            //    ////this.MaxWidth = 600;
-
-            //}
-        }
-        protected override void OnSourceInitialized(EventArgs e)
-        {
-            base.OnSourceInitialized(e);
-            var helper = new WindowInteropHelper(this);
-            _source = HwndSource.FromHwnd(helper.Handle);
-            _source.AddHook(new HwndSourceHook(Maximizer.WindowProc));
-            RegisterHotKey();
-        }
-        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            var helper = new WindowInteropHelper(this);
-            _source = HwndSource.FromHwnd(helper.Handle);
-            _source.AddHook(new HwndSourceHook(Maximizer.WindowProc));
-        }
-
-        protected override void OnClosed(EventArgs e)
-        {
-            _source.RemoveHook(HwndHook);
-            _source = null;
-            UnregisterHotKey();
-            base.OnClosed(e);
-        }
-
-        private void RegisterHotKey()
-        {
-            var helper = new WindowInteropHelper(this);
-            const uint VK_Q = 0x51;
-            const uint MOD_CTRL = 0x0002;
-            if (!RegisterHotKey(helper.Handle, HOTKEY_ID, MOD_CTRL, VK_Q))
-            {
-                MessageBox.Show("단축키 에러");
-            }
-        }
-
-        private void UnregisterHotKey()
-        {
-            var helper = new WindowInteropHelper(this);
-            UnregisterHotKey(helper.Handle, HOTKEY_ID);
-        }
-
+        #region HotKey /////
         private IntPtr HwndHook(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
             const int WM_HOTKEY = 0x0312;
@@ -110,7 +53,16 @@ namespace Shortcut.Views
             }
             return IntPtr.Zero;
         }
-
+        private void RegisterHotKey()
+        {
+            var helper = new WindowInteropHelper(this);
+            const uint VK_Q = 0x51;
+            const uint MOD_CTRL = 0x0002;
+            if (!RegisterHotKey(helper.Handle, HOTKEY_ID, MOD_CTRL, VK_Q))
+            {
+                MessageBox.Show("단축키 에러");
+            }
+        }
         private void OnHotKeyPressed()
         {
             if (CHK_VerticalMode.IsChecked == true && TGB_OpenAndClose.IsChecked == false)
@@ -173,41 +125,72 @@ namespace Shortcut.Views
                 }
             }
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void OnPropertyChanged(string propName)
+        private void UnregisterHotKey()
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
+            var helper = new WindowInteropHelper(this);
+            UnregisterHotKey(helper.Handle, HOTKEY_ID);
+        }
+        #endregion
+
+        #region 생성자 /////
+        public MainView()
+        {
+            InitializeComponent();
+
+            this.MaxHeight = SystemParameters.VirtualScreenHeight;
+            this.MinWidth = 65;
+            UISettings();
+            if (CHK_VerticalMode.IsChecked == true)
+            {
+                this.MaxWidth = 65;
+            }
+            //else
+            //{
+            //    ////this.MaxWidth = 600;
+
+            //}
+        }
+        #endregion
+
+        #region Window Method /////
+        protected override void OnSourceInitialized(EventArgs e)
+        {
+            base.OnSourceInitialized(e);
+            var helper = new WindowInteropHelper(this);
+            _source = HwndSource.FromHwnd(helper.Handle);
+            _source.AddHook(new HwndSourceHook(Maximizer.WindowProc));
+            RegisterHotKey();
+        }
+        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            var helper = new WindowInteropHelper(this);
+            _source = HwndSource.FromHwnd(helper.Handle);
+            _source.AddHook(new HwndSourceHook(Maximizer.WindowProc));
         }
 
+        protected override void OnClosed(EventArgs e)
+        {
+            _source.RemoveHook(HwndHook);
+            _source = null;
+            UnregisterHotKey();
+            base.OnClosed(e);
+        }
+        #endregion
+
+        #region Settings /////
         private void UISettings()
         {
             ReadSettings();
         }
         private void MonitorSetting(int monitor)
         {
-            ＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦＷＥＦ
-            monitor = 1;
-           　
+            
             this.WindowStartupLocation = WindowStartupLocation.Manual;
             System.Drawing.Rectangle workingArea = System.Windows.Forms.Screen.AllScreens[monitor].WorkingArea;
             this.Left = workingArea.Left;
             this.Top = workingArea.Top;
             this.Width = workingArea.Width;
             this.Height = workingArea.Height;
-
-
-            bool vertical = (CHK_VerticalMode.IsChecked == true);
-
-            // 세로 모드일 때 기존처럼 MaxWidth는 65 고정 유지
-            double verticalMaxWidth = 65.0;
-
-            // 펼침(전체)로 배치: 토글에 따른 높이 고정이 필요하면 collapsedFixedHeight에 값 전달
-            double? collapsedFixedHeight = null;
-
-            // 유틸 호출로 픽셀→DIP 변환 포함해서 정확히 배치
-            monitorUtility.ApplyWindowToMonitor(this, monitor, vertical, verticalMaxWidth, collapsedFixedHeight);
         }
         private void ReadSettings()
         {
@@ -248,6 +231,9 @@ namespace Shortcut.Views
             }
 
         }
+        #endregion
+
+        #region 이벤트 /////
         private void CHK_AlwaysTopMode_Checked(object sender, RoutedEventArgs e)
         {
             if (CHK_AlwaysTopMode.IsChecked == true)
@@ -374,5 +360,6 @@ namespace Shortcut.Views
             myPopup.HorizontalOffset = mouse.X;
             myPopup.VerticalOffset = mouse.Y + 30;
         }
+        #endregion
     }
 }
